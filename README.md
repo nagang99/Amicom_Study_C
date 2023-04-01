@@ -28,7 +28,46 @@ int main(){
 - 이곳에 작성하시면 됩니다.
 
 ## 3주차 배운 내용
-- 이곳에 작성하시면 됩니다.
+```
+#include <stdio.h>
+
+int count_num(int arr){
+    do{
+        if(arr % 10 == 3 || arr % 10 == 6 ||arr % 10 == 9){
+            return 0;
+        }
+        arr = arr / 10; 
+    }while(arr != 0);
+    return 1;
+}
+
+int main(){
+    int a, b;
+    int arr[110];
+    int count;
+   
+    while(1){
+        printf("입력 : ");
+        scanf("%d %d", &a,&b);
+        if (a<=99 && a>=1 && b<=99 && b>=1){
+            break;
+        }
+    }
+
+    for(int i = 0 ; i < (b-a+1) ; i++){
+        arr[i] = a + i;
+        if(arr[i] % 3 == 0 || count_num(arr[i]) == 0){
+            count ++;
+            continue;
+        }
+    }
+
+    printf("출력 : %d", count);
+    
+    return 0;
+}
+
+```
 
 ## 4주차 배운 내용
 - 이곳에 작성하시면 됩니다.
